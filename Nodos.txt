@@ -1,0 +1,28 @@
+Nodo:	1
+Padre:	0
+Hijos:	[2]
+Pregunta:es opera?
+Respuesta:respuesta
+Resultado:resultado
+===============================
+Nodo:	2
+Padre:	1
+Hijos:	[3, 4]
+Pregunta:es opera?
+Respuesta:si
+Resultado:NULL
+===============================
+Nodo:	3
+Padre:	2
+Hijos:	[]
+Pregunta:se escucha la orquesta?
+Respuesta:si
+Resultado:efectivamente es opera
+===============================
+Nodo:	4
+Padre:	1
+Hijos:	[]
+Pregunta:se escucha la orquesta?
+Respuesta:no
+Resultado:es heavy metal
+===============================
