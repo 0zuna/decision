@@ -29,7 +29,7 @@ def buscaHijas(papa):
 			hijas.append(nodo[x].n)
 	return hijas
 def masPreguntas():
-	
+
 def main():
 	nodo=[]
 	global nodo
@@ -65,7 +65,7 @@ def main():
 	print "excelente ya he aprendido manos a la obra"
 	print nodo[0].pregunta
 	hijas=buscaHijas(1)
-	print "las posibles respuestas son:"
+	print "las posibles respuestas aprendidas son:"
 	for x in range(len(hijas)):
 		print nodo[hijas[x]-1].respuesta
 	print "escriba una\n"
