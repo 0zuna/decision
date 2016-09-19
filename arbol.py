@@ -111,14 +111,7 @@ def main():
 			#nodo[len(nodo)-1].mostrarNodo()		
 			mas_Preguntas(nodo[len(nodo)-1])
 
-	print "\n\n\n\n\n\n\n\nexcelente ya he aprendido manos a la obra"
-	print nodo[0].pregunta
-	hijas=buscaHijas(1)
-	print "las posibles respuestas aprendidas son:"
-	for x in range(len(hijas)):
-		print nodo[hijas[x]-1].arista
-	print "escriba una\n"
-	Respuesta=raw_input()
+	
 	#resultadoFinal=buscaResultado(Respuesta)
 	#print resultadoFinal
 	txt_Nodos()
@@ -132,10 +125,55 @@ def main():
 	#		break
 	#	except:
 	#		print ("error")
+def mostrarRespuestas(padre):
+	hijas=buscaHijas(padre)
+	for x in range(len(hijas)):
+		print nodo[hijas[x]-1].arista
+	print 'escriba una>:'
+
+def miPapa(nodo):
+	return nodo[nodo].nodoPadre
+def busqueda(pregunt,respuest):
+	#print 'buscando ',pregunt,respuest
+	for x in range(len(nodo)):
+		if nodo[x].pregunta==pregunt and nodo[x].arista==respuest and nodo[x].resultado!='NULL':
+			return nodo[x].resultado
+		if nodo[x].resultado=='NULL':
+			return nodo[x].nodosHijos
 
 
+def nextPregunta(padre):
+	nodo[padre].mostrarNodo()
+	print nodo[padre].pregunta
+	mostrarRespuestas(nodo[padre].n)
+	respuesta=raw_input()
+
+	if type(busqueda(nodo[padre].pregunta,respuesta))==list:
+		print busqueda(nodo[padre].pregunta,respuesta)[0]-1
+		nextPregunta (busqueda(nodo[padre].pregunta,respuesta)[0]-1)
+		#extPregunta(busqueda(nodo[padre].pregunta,respuesta))
+	else:
+		print 'resultados encontrados'
+		print busqueda(nodo[padre].pregunta,respuesta)
+
+		
+
+
+def preguntar():
+	print "\n\n\n\n\n\n\n\nexcelente ya he aprendido manos a la obra"
+	#print nodo[0].pregunta
+	#hijas=buscaHijas(1)
+	#print "las posibles respuestas aprendidas son:"
+	
+	"""for x in range(len(hijas)):
+		print nodo[hijas[x]-1].arista
+		#print nodo[nodo[x].nodosHijos].arista
+	print "escriba una\n>:"
+	Respuesta=raw_input()"""
+	nextPregunta(0)
 
 nodo=[]
 if __name__=="__main__":
 	nodo.append(Nodo(1,0,[],"pregunta","respuesta","resultado"))
 	main()
+	preguntar()
