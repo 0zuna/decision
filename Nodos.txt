@@ -1,14 +1,14 @@
 Nodo:	1
 Padre:	0
 Hijos:	[2, 5]
-Pregunta:esun animal?
+Pregunta:es un animal?
 Arista:respuesta
 Resultado:resultado
 ===============================
 Nodo:	2
 Padre:	1
 Hijos:	[3, 4]
-Pregunta:esun animal?
+Pregunta:es un animal?
 Arista:si
 Resultado:NULL
 ===============================
@@ -24,12 +24,26 @@ Padre:	2
 Hijos:	[]
 Pregunta:tiene pelo?
 Arista:no
-Resultado:es un elefante
+Resultado:peces
 ===============================
 Nodo:	5
 Padre:	1
+Hijos:	[6, 7]
+Pregunta:es un animal?
+Arista:no
+Resultado:NULL
+===============================
+Nodo:	6
+Padre:	5
 Hijos:	[]
-Pregunta:esun animal?
+Pregunta:tiene dos brazos?
+Arista:si
+Resultado:es un Humano
+===============================
+Nodo:	7
+Padre:	5
+Hijos:	[]
+Pregunta:tiene dos brazos?
 Arista:no
 Resultado:es un alien
 ===============================
