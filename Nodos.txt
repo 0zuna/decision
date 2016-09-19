@@ -1,0 +1,70 @@
+Nodo:	1
+Padre:	0
+Hijos:	[2, 5, 8]
+Pregunta:es un animal?
+Arista:respuesta
+Resultado:resultado
+===============================
+Nodo:	2
+Padre:	1
+Hijos:	[3, 4]
+Pregunta:es un animal?
+Arista:si
+Resultado:NULL
+===============================
+Nodo:	3
+Padre:	2
+Hijos:	[]
+Pregunta:tiene pelo?
+Arista:si
+Resultado:es una rata
+===============================
+Nodo:	4
+Padre:	2
+Hijos:	[]
+Pregunta:tiene pelo?
+Arista:no
+Resultado:es un elefante
+===============================
+Nodo:	5
+Padre:	1
+Hijos:	[6, 7]
+Pregunta:es un animal?
+Arista:no
+Resultado:NULL
+===============================
+Nodo:	6
+Padre:	5
+Hijos:	[]
+Pregunta:tiene brazos?
+Arista:si
+Resultado:es humano
+===============================
+Nodo:	7
+Padre:	5
+Hijos:	[]
+Pregunta:tiene brazos?
+Arista:no
+Resultado:es un monstruo
+===============================
+Nodo:	8
+Padre:	1
+Hijos:	[9, 10]
+Pregunta:es un animal?
+Arista:tal vez
+Resultado:NULL
+===============================
+Nodo:	9
+Padre:	8
+Hijos:	[]
+Pregunta:tiene patas de madera?
+Arista:si
+Resultado:es unasilla
+===============================
+Nodo:	10
+Padre:	8
+Hijos:	[]
+Pregunta:tiene patas de madera?
+Arista:no
+Resultado:es una mesa
+===============================
